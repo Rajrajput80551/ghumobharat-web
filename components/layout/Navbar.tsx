@@ -7,11 +7,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header className="fixed top-0 left-0 w-full z-50">
-      <nav className="relative mx-auto mt-6 flex w-[92%] max-w-7xl items-center justify-between rounded-3xl border border-white/10 bg-black/30 px-10 py-5 backdrop-blur-3xl shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
+      <nav className="relative mx-auto mt-6 flex w-[92%] max-w-7xl items-center justify-between rounded-3xl border border-white/10 bg-black/30 px-5 py-4 lg:px-10 lg:py-5 backdrop-blur-3xl shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
         {/* Logo */}
 
         <div className="flex items-center gap-2">
-  <h1 className="text-4xl font-extrabold tracking-tight text-white">
+  <h1 className="text-xl sm:text-2xl lg:text-4xl font-extrabold tracking-tight text-white">
     Ghumo<span className="text-orange-500">Bharat</span>
   </h1>
 </div>
@@ -36,23 +36,24 @@ export default function Navbar() {
 
         {/* Button */}
 
-        <Link
-          href="/#trip-planner"
-          className="rounded-full bg-orange-500 px-8 py-3 text-white font-semibold shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
-          >
-          Plan My Trip
-        </Link>
+       <div className="flex items-center gap-2">
 
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden text-white"
-          >
-          {menuOpen ? (
-          <X size={32} />
-           ) : (
-          <Menu size={32} />
-          )}
-        </button>
+     <Link
+      href="/#trip-planner"
+      className="rounded-full bg-orange-500 px-2.5 py-2 text-[11px] sm:text-sm lg:px-8 lg:py-3 lg:text-base text-white font-semibold shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
+      >
+      Plan My Trip
+    </Link>
+
+    <button
+    onClick={() => setMenuOpen(!menuOpen)}
+    className="lg:hidden text-white"
+    >
+    {menuOpen ? <X size={30} /> : <Menu size={30} />}
+     </button>
+
+    </div>
+         
 
         {/* Mobile Menu */}
 
@@ -111,9 +112,9 @@ export default function Navbar() {
         </Link>
       </li>
 
-      <button className="mt-4 rounded-full bg-orange-500 py-3 font-semibold hover:bg-orange-600">
+      {/* <button className="mt-4 rounded-full bg-orange-500 py-3 font-semibold hover:bg-orange-600">
         Plan My Trip
-      </button>
+      </button> */}
 
     </ul>
 
