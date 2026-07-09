@@ -21,16 +21,7 @@ export default function Navbar() {
 
   {/* Mobile Menu Button */}
 
-<button
-  onClick={() => setMenuOpen(!menuOpen)}
-  className="lg:hidden text-white"
->
-  {menuOpen ? (
-    <X size={32} />
-  ) : (
-    <Menu size={32} />
-  )}
-</button>
+
 
   <li><Link href="/" className="hover:text-orange-400 transition">Home</Link></li>
 
@@ -51,6 +42,17 @@ export default function Navbar() {
           >
           Plan My Trip
         </Link>
+
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="lg:hidden text-white"
+          >
+          {menuOpen ? (
+          <X size={32} />
+           ) : (
+          <Menu size={32} />
+          )}
+        </button>
 
         {/* Mobile Menu */}
 
