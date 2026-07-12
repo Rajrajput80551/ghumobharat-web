@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://ghumobharat.in/sitemap.xml",
+    sitemap: "https://ghumo-bharat.com/sitemap.xml",
   };
 }
