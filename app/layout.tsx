@@ -22,32 +22,63 @@ export const metadata: Metadata = {
     "Book personalized trips across India with trusted local hosts. Explore Varanasi, Ayodhya, Prayagraj, Mathura, Vrindavan and more with transparent pricing and customized itineraries.",
 
   keywords: [
-    "GhumoBharat",
-    "India Travel",
-    "Varanasi Tour",
-    "Ayodhya Tour",
-    "Prayagraj Tour",
-    "Mathura Tour",
-    "Vrindavan Tour",
-    "India Tour Packages",
-    "Spiritual Tour India",
-    "Travel Agency India",
-  ],
+  "Ghumo Bharat",
+  "GhumoBharat",
+  "ghumo bharat",
+  "ghumobharat",
+  "Ghumo Bharat Travel",
+  "Ghumo Bharat Tours",
+  "Ghumo Bharat India",
+  "India Travel",
+  "Varanasi Tour",
+  "Ayodhya Tour",
+  "Prayagraj Tour",
+  "Mathura Tour",
+  "Vrindavan Tour",
+  "Kashi Tour",
+  "Spiritual Tour India",
+  "India Tour Packages",
+  "Travel Agency India",
+  "Tour Guide India",
+  "Religious Tour India",
+],
 
   authors: [{ name: "GhumoBharat" }],
 
   creator: "GhumoBharat",
+  applicationName: "Ghumo Bharat",
 
-  metadataBase: new URL("https://ghumobharat.in"),
+  metadataBase: new URL("https://ghumo-bharat.com"),
 
-  openGraph: {
-    title: "GhumoBharat",
-    description:
-      "Explore India with trusted local hosts and personalized travel experiences.",
-    url: "https://ghumobharat.in",
-    siteName: "GhumoBharat",
-    type: "website",
-  },
+ openGraph: {
+  title: "Ghumo Bharat",
+  description:
+    "Explore India with trusted local hosts and personalized travel experiences.",
+  url: "https://ghumo-bharat.com",
+  siteName: "Ghumo Bharat",
+  type: "website",
+
+  images: [
+    {
+      url: "/images/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Ghumo Bharat",
+    },
+  ],
+},
+alternates: {
+  canonical: "https://ghumo-bharat.com",
+},
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  name: "Ghumo Bharat",
+  url: "https://ghumo-bharat.com",
+  logo: "https://ghumo-bharat.com/images/logo.png",
+  telephone: "+91-8303943001",
 };
 
 export default function RootLayout({
@@ -61,6 +92,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
   <body className="min-h-full flex flex-col">
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+     __html: JSON.stringify(organizationSchema),
+  }}
+  />
 
   <Navbar />
 
