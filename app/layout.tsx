@@ -1,6 +1,7 @@
 import { Toaster } from "sonner";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -112,6 +113,7 @@ export default function RootLayout({
     position="top-right"
     duration={2500}
   />
+  <GoogleAnalytics gaId="G-C0DD3DY3SP" />
 
  </body>
     </html>
