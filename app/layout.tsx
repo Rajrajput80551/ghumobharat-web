@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GhumoBharat | Explore India with Trusted Local Hosts",
+  title: "Ghumo Bharat | Explore India with Trusted Local Hosts",
 
   description:
     "Book personalized trips across India with trusted local hosts. Explore Varanasi, Ayodhya, Prayagraj, Mathura, Vrindavan and more with transparent pricing and customized itineraries.",
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
   creator: "GhumoBharat",
   applicationName: "Ghumo Bharat",
 
-  metadataBase: new URL("https://ghumo-bharat.com"),
+  metadataBase: new URL("https://www.ghumo-bharat.com"),
 
  openGraph: {
   title: "Ghumo Bharat",
   description:
     "Explore India with trusted local hosts and personalized travel experiences.",
-  url: "https://ghumo-bharat.com",
+  url: "https://www.ghumo-bharat.com",
   siteName: "Ghumo Bharat",
   type: "website",
 
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   ],
 },
 alternates: {
-  canonical: "https://ghumo-bharat.com",
+ canonical: "https://www.ghumo-bharat.com",
 },
 };
 
@@ -76,8 +76,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
   name: "Ghumo Bharat",
-  url: "https://ghumo-bharat.com",
-  logo: "https://ghumo-bharat.com/images/logo.png",
+  url: "https://www.ghumo-bharat.com",
+  logo: "https://www.ghumo-bharat.com/images/logo.png",
   telephone: "+91-8303943001",
 };
 
