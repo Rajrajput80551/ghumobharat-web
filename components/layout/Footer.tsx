@@ -118,7 +118,7 @@ export default function Footer() {
         <div className="mt-16 border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
 
           <p className="text-gray-500 text-center md:text-left">
-            © {new Date().getFullYear()} GhumoBharat. All Rights Reserved.
+            © {new Date().getFullYear()} Ghumo Bharat. All Rights Reserved.
           </p>
 
           <p className="text-gray-500">

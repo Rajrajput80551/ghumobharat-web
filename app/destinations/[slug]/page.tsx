@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { destinations } from "@/app/data/destinations";
@@ -7,6 +8,55 @@ type Props = {
     slug: string;
   }>;
 };
+
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
+  const { slug } = await params;
+
+  const destination =
+    destinations[slug as keyof typeof destinations];
+
+  if (!destination) {
+    return {};
+  }
+
+  return {
+    title: `${destination.name} Tour Package | Ghumo Bharat`,
+    description: destination.description,
+
+    keywords: [
+      destination.name,
+      `${destination.name} Tour`,
+      `${destination.name} Tour Package`,
+      `${destination.name} Travel`,
+      `${destination.name} Local Guide`,
+      "Ghumo Bharat",
+      "India Travel",
+      "Spiritual Tour India",
+    ],
+
+    alternates: {
+      canonical: `https://www.ghumo-bharat.com/destinations/${slug}`,
+    },
+
+    openGraph: {
+      title: `${destination.name} Tour Package | Ghumo Bharat`,
+      description: destination.description,
+      url: `https://www.ghumo-bharat.com/destinations/${slug}`,
+      siteName: "Ghumo Bharat",
+
+      images: [
+        {
+          url: destination.image,
+          width: 1200,
+          height: 630,
+          alt: destination.name,
+        },
+      ],
+    },
+  };
+}
 
 export default async function DestinationPage({ params }: Props) {
   const { slug } = await params;
@@ -238,7 +288,7 @@ export default async function DestinationPage({ params }: Props) {
           </h2>
 
           <p className="mt-6 text-xl text-white/90">
-            Plan your personalized journey with GhumoBharat.
+            Plan your personalized journey with Ghumo Bharat.
           </p>
 
           <Link

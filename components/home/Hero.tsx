@@ -19,14 +19,14 @@ export default function Hero() {
 
           {/* Heading */}
           <h1 className="text-white font-black leading-[1.08] drop-shadow-2xl text-5xl md:text-6xl lg:text-7xl">
-            Explore India
-            <br />
-            With Trusted Local Hosts
+           Ghumo Bharat
+           <br />
+           Explore India With Trusted Local Hosts
           </h1>
 
           {/* Subtitle */}
           <p className="mx-auto mt-7 max-w-3xl text-lg md:text-xl text-white/90">
-            Personalized Trips • Transparent Pricing • No Hidden Charges
+            Personalized Trips • Trusted Local Hosts • Transparent Pricing • No Hidden Charges
           </p>
 
           {/* Buttons */}
